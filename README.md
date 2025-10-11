@@ -11,9 +11,9 @@ El repositorio está dividido en distintos niveles de complejidad:
 - Miniproyectos: Aplicaciones prácticas que integran los conocimientos de todos los niveles anteriores.
 
 
-***** PRUEBAS EN SIMULACION *****
+## PRUEBAS EN SIMULACION 
 Para la simulación de los códigos se desarrollaron en los softwares ghdl y gtkwave.
 
-***** PRUEBAS EN FISICO *****
+## PRUEBAS EN FISICO 
 Los códigos que se presentan han sido puestos a prueba en físico en un FPGA DE10-Lite
 
