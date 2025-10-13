@@ -19,7 +19,7 @@ Para la simulación de los códigos se desarrollaron en los softwares ghdl y gtk
 ## ⚙️ Pruebas en hardware
 Los códigos que se presentan han sido puestos a prueba en físico en un FPGA DE10-Lite.
 
-## - Conceptops Basicos de VHDL
+## 📚 - Conceptops Basicos de VHDL
 
 ## - **`library`** y **`use`**
 Utilizados para incluir librerias del lenguaje.
@@ -36,7 +36,7 @@ Describe el funcionamiento de la entidad ademas se asignan operaciones a los pue
 ## - **`begin`** y **`end`**
 Delimita al bloque en donde se escriben las instruciones del funcionamiento(logica combinacional, secuencial etc).
 
-## **** Para Testbech ****
+## 📚 Elementos del Testbech ****
 
 ## - **`Signal`**
 Señales internas del testbench para comunicar entre la entidad a verificar y el testbench.
