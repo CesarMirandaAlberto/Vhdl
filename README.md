@@ -11,42 +11,42 @@ El repositorio está dividido en distintos niveles de complejidad:
 - Miniproyectos: Aplicaciones prácticas que integran los conocimientos de todos los niveles anteriores.
 
 
-# - Pruebas en simulación
+## - Pruebas en simulación
 Para la simulación de los códigos se desarrollaron en los softwares ghdl y gtkwave.
 
-# - Pruebas en físico
+## - Pruebas en físico
 Los códigos que se presentan han sido puestos a prueba en físico en un FPGA DE10-Lite.
 
 ## - Conceptops Basicos de VHDL
 
-# - `library` y `use`
+## - `library` y `use`
 Utilizados para incluir librerias del lenguaje.
 
-# -`entity`
+## -`entity`
 Define la interfaz del circuito (carcasa).
 
-# - `port(...)`
+## - `port(...)`
 Lista de puertos (entradas y salidas) de la entidad se especifica el tipo de dato y el ancho de los puertos.
 
-# - `architecture`
+## - `architecture`
 Describe el funcionamiento de la entidad ademas se asignan operaciones a los puertos.
 
-# - `begin` y `end`
+## - `begin` y `end`
 Delimita al bloque en donde se escriben las instruciones del funcionamiento(logica combinacional, secuencial etc).
 
 ## **** Para Testbech ****
 
-# - `Signal`
+## - `Signal`
 Señales internas del testbench para comunicar entre la entidad a verificar y el testbench.
 
-# - `Componente`
+## - `Componente`
 Declaración local de las entidadades locales que se van a verificar.
 
-# - `Instaciación`
+## - `Instaciación`
 Incluye entidades externas al testbench.
 
-# - `Mapeo`
+## - `Mapeo`
 Conecta las señales del testbench con los puertos de la entidad (conectar los  pines de un microcontrolador a un cable).
 
-# - `Estimulos`
+## - `Estimulos`
 Aplican señales a las entradas para analizar el comportamiento. (Es como aplicar voltajes en el circuito y analizar como trabaja).
