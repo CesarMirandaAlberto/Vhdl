@@ -36,7 +36,7 @@ Describe el funcionamiento de la entidad ademas se asignan operaciones a los pue
 ## - **`begin`** y **`end`**
 Delimita al bloque en donde se escriben las instruciones del funcionamiento(logica combinacional, secuencial etc).
 
-## 📚 Elementos del Testbech ****
+## 📚 - Elementos del Testbech
 
 ## - **`Signal`**
 Señales internas del testbench para comunicar entre la entidad a verificar y el testbench.
