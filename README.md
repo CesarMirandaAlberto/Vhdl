@@ -20,3 +20,18 @@ Para la simulación de los códigos se desarrollaron en los softwares ghdl y gtk
 Los códigos que se presentan han sido puestos a prueba en físico en un FPGA DE10-Lite.
 
 ## 💻 Comandos para compilar y simular las entidades 
+
+```bash
+# Compilar entidades con ghdl
+ghdl -a Midiseño.vhd
+ghdl -a Midiseño_TB.vhd
+#Elaborar la simulacion de la entidad
+ghdl -e Midiseño_TB
+#Ejecutar simulación y generar el archivo vcd 
+ghdl -r Midiseño_TB --vcd=Testbench.vcd
+
+# Visualizar testbench en forma de onda
+gtkwave Testbench.vcd
+
+
+
