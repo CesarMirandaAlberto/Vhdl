@@ -25,8 +25,10 @@ Los códigos que se presentan han sido puestos a prueba en físico en un FPGA DE
 # Compilar entidades con ghdl
 ghdl -a Midiseño.vhd
 ghdl -a Midiseño_TB.vhd
+
 #Elaborar la simulacion de la entidad
 ghdl -e Midiseño_TB
+
 #Ejecutar simulación y generar el archivo vcd 
 ghdl -r Midiseño_TB --vcd=Testbench.vcd
 
