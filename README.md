@@ -5,16 +5,18 @@ Este repositorio contiene diseños desarrollados en VHDL junto con sus respectiv
 
 El repositorio está dividido en distintos niveles de complejidad:
 
-- **Básico:** Ejercicios fundamentales para comprender la sintaxis de VHDL y construir una base sólida.
-- **Medio:** Diseños que aplican conceptos básicos en módulos prácticos como flip-flops, divisores de frecuencia, y máquinas de estados (FSM).
-- **Avanzado:** Implementación de protocolos de comunicación utilizando los fundamentos de niveles anteriores.
-- **Miniproyectos:** Aplicaciones prácticas que integran los conocimientos de todos los niveles.
+- 📂 **Básico:** Ejercicios fundamentales para comprender la sintaxis de VHDL y construir una base sólida.
+- 📂 **Medio:** Diseños que aplican conceptos básicos en módulos prácticos como flip-flops, divisores de frecuencia, y máquinas de estados (FSM).
+- 📂 **Avanzado:** Implementación de protocolos de comunicación utilizando los fundamentos de niveles anteriores.
+- 📂 **Miniproyectos:** Aplicaciones prácticas que integran los conocimientos de todos los niveles.
 
 
-## 🧪 Pruebas en simulación
+## 🧪 💻 Pruebas en simulación
 Para la simulación de los códigos se desarrollaron en los softwares ghdl y gtkwave.
-- **GHDL:** Compilar
-- **GTKWAVE:** Visualizar señales y resultados.
+- **GHDL:** Compilar las entidades y testbench.
+- **GTKWAVE:** Visualizar señales y resultados en forma de onda.
 
 ## ⚙️ Pruebas en hardware
 Los códigos que se presentan han sido puestos a prueba en físico en un FPGA DE10-Lite.
+
+## 💻 Comandos para compilar y simular las entidades 
