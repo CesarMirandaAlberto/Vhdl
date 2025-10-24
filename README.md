@@ -33,7 +33,10 @@ ghdl -e Midiseño_TB
 ghdl -r Midiseño_TB --vcd=Testbench.vcd
 
 # Visualizar testbench en forma de onda
-gtkwave Testbench.vcd
+gtkwave Testbench.vcd 
 
-
-
+```
+# ⚙️ 💻🧪 Para automatización de compilado y simulación
+A medida que los diseños se vuelven más complejos y requieren instanciación de múltiples entidades, es necesario que todas estas sean compiladas previo a la simulación.
+Para automatizar el proceso, en algunos de los proyectos se incluyen archivos `.bat` que permiten compilar, ejeutar la simulación de forma automatica.
+Además, se adjunta en este repositorio una plantilla de archivo `.bat` que puede adaptarse a otros diseños si es necesario.
