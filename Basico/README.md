@@ -1,0 +1,2 @@
+# Especificaciones de compilado 
+
