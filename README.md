@@ -16,9 +16,6 @@ Para la simulación de los códigos se desarrollaron en los softwares ghdl y gtk
 - **GHDL:** Compilar las entidades y testbench.
 - **GTKWAVE:** Visualizar señales y resultados en forma de onda.
 
-## ⚙️ Pruebas en hardware
-Los códigos que se presentan han sido puestos a prueba en físico en un FPGA DE10-Lite.
-
 ## 💻 Comandos para compilar y simular las entidades 
 
 ```bash
