@@ -34,6 +34,11 @@ gtkwave Testbench.vcd
 
 ```
 ### ⚙️ 💻🧪 Para automatización de compilado y simulación
-A medida que los diseños se vuelven más complejos y requieren instanciación de múltiples entidades, es necesario que todas estas sean compiladas previo a la simulación.<br>
+A medida que los diseños se vuelven más complejos y requieren instanciación de múltiples entidades, es necesario que todas estas sean compiladas previo a la compilación del diseño principal.<br>
 Para automatizar el proceso, en algunos de los proyectos se incluyen archivos `.bat` que permiten compilar, ejeutar la simulación de forma automatica.<br>
-Además, se adjunta en este repositorio una plantilla de archivo `.bat` que puede adaptarse a otros diseños si es necesario.
+
+### ⚠️⚠️ Leer readme de cada nivel
+Dado que varios de los diseños instancian el mismo diseño, para evitar redundancia y subir los mismos diseños se desarrollan dos plantillas genericas para los siguientes casos, dentro de estos readme se encuentra la explicación de las plantillas de los `.bat`.
+
++ 1.- Diseños donde tanto la entidad principal como las que se instanciarán estan en la misma carpeta.
++ 2.- Diseños donde la entidad principal se encuentra en una carpeta diferente al de las entidades a instancias.
