@@ -1,5 +1,5 @@
 # VHDL
-Este repositorio contiene diseños desarrollados en VHDL junto con sus respectivos testbenches para verificación funcional mediante simulación y pruebas físicas.
+Este repositorio contiene diseños desarrollados en VHDL junto con sus respectivos testbenches para verificación funcional mediante simulación y pruebas físicas. Cada una de las pruebas físicas han sido implementadas en un FPGA **DE10-Lite**.
 
 ## 📁 Estructura del repositorio
 
