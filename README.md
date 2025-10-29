@@ -16,7 +16,7 @@ Para la simulación de los códigos se desarrollaron en los softwares ghdl y gtk
 - **GHDL:** Compilar las entidades y testbench.
 - **GTKWAVE:** Visualizar señales y resultados en forma de onda.
 
-## 💻 Comandos para compilar y simular las entidades 
+### 💻 Comandos para compilar y simular las entidades 
 
 ```bash
 # Compilar entidades con ghdl
@@ -33,7 +33,7 @@ ghdl -r Midiseño_TB --vcd=Testbench.vcd
 gtkwave Testbench.vcd 
 
 ```
-## ⚙️ 💻🧪 Para automatización de compilado y simulación
+### ⚙️ 💻🧪 Para automatización de compilado y simulación
 A medida que los diseños se vuelven más complejos y requieren instanciación de múltiples entidades, es necesario que todas estas sean compiladas previo a la simulación.<br>
 Para automatizar el proceso, en algunos de los proyectos se incluyen archivos `.bat` que permiten compilar, ejeutar la simulación de forma automatica.<br>
 Además, se adjunta en este repositorio una plantilla de archivo `.bat` que puede adaptarse a otros diseños si es necesario.
