@@ -1,0 +1,4 @@
+#Ingnorar archivos generados por el compilador
+*.cf
+*.vcd
+*.o
