@@ -29,48 +29,47 @@ architecture Testbench of Compuertas_Logicas_TB is
 	end component;
 
 -- Señales que con las que trabajará el testbench (visualización en el waveform) acorde a la lista de puertos del componente 
-	signal X: std_logic := '0';  --Inicialización de Señales
-	signal Y: std_logic := '0';
+	signal X_TB: std_logic := '0';  --Inicialización de Señales
+	signal Y_TB: std_logic := '0';
 	
-	signal Sand : std_logic;
-	signal Sor :  std_logic;
-	signal Snot:  std_logic;
-	signal Snor:  std_logic;
-	signal Snand: std_logic;
-	signal Sxor:  std_logic;
+	signal Sand_TB : std_logic;
+	signal Sor_TB :  std_logic;
+	signal Snot_TB:  std_logic;
+	signal Snor_TB:  std_logic;
+	signal Snand_TB: std_logic;
+	signal Sxor_TB:  std_logic;
 	
 	begin
 	--Instanciacion a la entidad principal (conectar los puertos de la entidad principal con las señales del Testbench)
 	DUT: Compuertas_Logicas
 		port map(
-			X => X,
-			Y => Y,
-			Sand => Sand,
-			Sor  => Sor,
-			Snot => Snot,
-			Snor => Snor,
-			Snand => Snand,
-			Sxor => Sxor
+			X => X_TB,
+			Y => Y_TB,
+			Sand => Sand_TB,
+			Sor  => Sor_TB,
+			Snot => Snot_TB,
+			Snor => Snor_TB,
+			Snand => Snand_TB,
+			Sxor => Sxor_TB
 		);
 	
 	--Estimulacion de señales
 	Estimulos: process
 	
 	begin
-		X <= '0';
-		y <= '0';
+		X_TB <= '0';
+		Y_TB <= '0';
 		wait for 10 ns;
-		X <= '1';
-		Y <= '0';
+		X_TB <= '1';
+		Y_TB <= '0';
 		wait for 10 ns; --Retardo entre estimulos
-		X <= '0';
-		Y <= '1';
+		X_TB <= '0';
+		Y_TB <= '1';
 		wait for 10 ns;
-		X <= '1';
-		Y <= '1';
+		X_TB <= '1';
+		Y_TB <= '1';
 		wait for 10 ns;
 		wait;
 	end process; --Fin de las estimulaciones
 	
 end Testbench;
-	
