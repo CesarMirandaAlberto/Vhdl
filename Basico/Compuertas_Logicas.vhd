@@ -4,6 +4,8 @@
 --	Este codigo VHDL implementa las compuertas logicas como una introducción 
 --  a los fundamentos de VHDL.
 --  El codigo consta de dos entradas y seis salidas una para cada compuerta
+--  se implementa asignamiento continuo para la asignacion de las compuertas
+--  lógicas.
 -- ===========================================================================
 
 -- Inclusion de librerias
