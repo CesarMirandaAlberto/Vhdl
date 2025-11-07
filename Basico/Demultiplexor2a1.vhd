@@ -2,6 +2,9 @@
 --						***** DEMULTIPLEXOR 2 A 1*****
 --	Este codigo VHDL implementa un demultiplexor 2 a 1 
 --  El codigo consta de dos entradas y una salida de un bit
+--  aunque solo se necesita 1 bit para las salidas posibles se implementa un 
+--  Selector de 2 bits para comprobar que no hay asignamiento en otros valores
+--  del selector.
 -- ===========================================================================
 
 --Inclusion de librerias
@@ -12,7 +15,7 @@ use ieee.std_logic_1164.all;
 entity Demultiplexor2a1 is 
 	port( 	--Entradas
 			X : in std_logic;
-			Selector: in std_logic_vector(1 downto 0); --Entrada con acho de dos bits de tipo vector
+			Selector: in std_logic_vector(1 downto 0); 
 			--Salidas
 			Salida1 : out std_logic;
 			Salida2 : out std_logic
