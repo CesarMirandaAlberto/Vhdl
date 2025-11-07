@@ -24,32 +24,32 @@ architecture Testbench of Demultiplexor2a1_TB is
 		);
 	end component;
 --Señales locales con las que trabajará el testbench 
-			signal X : std_logic := '1';
-			signal Selector:  std_logic_vector(1 downto 0) := "00";
-			signal Salida1 :  std_logic := '0';
-			signal Salida2 :  std_logic := '0';
+			signal X_TB : std_logic := '1';
+			signal Selector_TB:  std_logic_vector(1 downto 0) := "00";
+			signal Salida1_TB :  std_logic := '0';
+			signal Salida2_TB :  std_logic := '0';
 	
 	begin
 --Instanciación del demultiplexor	
 	DUT: Demultiplexor2a1
 --Mapeo de señales
 		port map(
-			X => X,
-			Selector => Selector,
-			Salida1 => Salida1,
-			Salida2 => Salida2
+			X => X_TB,
+			Selector => Selector_TB,
+			Salida1 => Salida1_TB,
+			Salida2 => Salida2_TB
 		);
 --Aplicación de estimulos		
 		Estimulos: process
 	
 			begin
-				Selector <= "01";
+				Selector_TB <= "01";
 				wait for 10 ns; --Retardos
-				Selector <= "10";
+				Selector_TB <= "10";
 				wait for 10 ns; 
-				Selector <= "11";
+				Selector_TB <= "11";
 				wait for 10 ns;
-				Selector <= "00";
+				Selector_TB <= "00";
 				wait for 10 ns;
 				wait;
 				
