@@ -2,6 +2,7 @@
 -- 				***** DEMULTIPLEXOR 1 A 4 *****
 -- 	Este código implementa el desarrollo de un demultiplexor 1 a 4 con 
 --  1 Entrada y 4 Salidas (vectores) con un ancho de 4 bits.
+--  ademas se implementa el uso de constantes para evitar números mágicos
 -- ===========================================================================
 
 --Inclusion de librerias
