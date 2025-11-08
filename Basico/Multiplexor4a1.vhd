@@ -3,6 +3,7 @@
 -- 	El presente código implementa el desarrollo de un multiplexor 4 a 1 
 --  4 Entradas y 1 salida de tipo vector con un ancho de 3 bits al igual
 --  que el selector.
+--  se implementan constantes a fin de evitar número mágicos.
 -- ===========================================================================
 
 --Inclusión de librerias
