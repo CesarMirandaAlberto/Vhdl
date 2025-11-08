@@ -3,6 +3,7 @@
 -- 	El presente código implementa el desarrollo del testbench para analizar el
 --  funcionamiento del Multiplexor2a1 
 --  Nota: DUT-> Nombre de la instanciación
+--  Para la instanciación se hace mediante componente
 -- ===========================================================================
 -- Inclusión de librerias
 library IEEE;
@@ -24,31 +25,35 @@ architecture Testbench of Multiplexor2a1_TB is
 		);
 	end component;
 	--Señales locales para el testbench
-		signal  X : std_logic := '0';
-		signal Y : std_logic := '0';
-		signal Selector : std_logic_vector(1 downto 0) :="00";
-		signal Salida : std_logic;
+		signal  X_TB : std_logic := '0';
+		signal Y_TB : std_logic := '0';
+		signal Selector_TB : std_logic_vector(1 downto 0) :="00";
+		signal Salida_TB : std_logic;
 		
 	begin
 	--Instanciación del Multiplexor2a1
 		DUT: Multiplexor2a1
 		port map( -- Mapeo de señakes
-			X => X,
-			Y => Y,
-			Selector => Selector,
-			Salida => Salida
+			X => X_TB,
+			Y => Y_TB,
+			Selector => Selector_TB,
+			Salida => Salida_TB
 		);
 		
 	Estimulos: process --Inicio de estimulos a las señales
 	
 		begin
-			Selector <="00"; --Asignación de valores
+		
+			X_TB <= '1';
+			Y_TB <= '0';
+			
+			Selector_TB <="00"; --Asignación de valores
 			wait for 10 ns; --Retardo entre estimulos
-			Selector <= "01"; 
+			Selector_TB <= "01"; 
 			wait for 10 ns;
-			Selector <="10";
+			Selector_TB <="10";
 			wait for 10 ns;
-			Selector <= "11"; 
+			Selector_TB <= "11"; 
 			wait for 10 ns;
 			wait;
 			
