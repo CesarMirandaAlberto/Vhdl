@@ -3,6 +3,9 @@
 -- 	El presente código implementa el desarrollo de un multiplexor 2 a 1
 --  2 Entradas 1 Salida con un ancho de 1 bit
 --  Selector de tipo vector con ancho de 2 bits
+--  apesar que solo se necesita un bit para el selector dado que solo son dos
+--  entradas el selector se implementa para 4 combinaciones para analizar mas
+--  a detalle e funcionamiento de las asignaciones.
 -- ===========================================================================
 --Inclusión de librerias
 library IEEE;
