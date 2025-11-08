@@ -3,6 +3,7 @@
 -- 	El presente código implementa el desarrollo del testbench para analizar el 
 --  funcionamiento del Multiplexor4a1
 --  Nota: DUT-> Nombre de la instanciación
+--  la instanciación de la entidad se realiza mediante Componente.
 -- ===========================================================================
 --Inclusión de librerias
 library IEEE;
@@ -26,38 +27,38 @@ architecture Testbench of Multiplexor4a1_TB is
 	);
 	end component;
 	--Señales locales del testbench
-		signal  A : std_logic_vector(2 downto 0) := "010";
-		signal	B : std_logic_vector(2 downto 0) := "011";
-		signal	C : std_logic_vector(2 downto 0) := "100";
-		signal	D : std_logic_vector(2 downto 0) := "101" ;
-		signal	Selector: std_logic_vector(2 downto 0) := "000";
-		signal	Salida :  std_logic_vector(2 downto 0);
+		signal  A_TB : std_logic_vector(2 downto 0) := "010";
+		signal	B_TB : std_logic_vector(2 downto 0) := "011";
+		signal	C_TB : std_logic_vector(2 downto 0) := "100";
+		signal	D_TB : std_logic_vector(2 downto 0) := "101" ;
+		signal	Selector_TB: std_logic_vector(2 downto 0) := "000";
+		signal	Salida_TB :  std_logic_vector(2 downto 0);
 	
 	begin
 	--instanciación de Multiplexor4a1
 	DUT: Multiplexor4a1
 		port map( --Mapeo de señales
-			A => A,
-			B => B,
-			C => C,
-			D => D,
-			Selector => Selector,
-			Salida => Salida
+			A => A_TB,
+			B => B_TB,
+			C => C_TB,
+			D => D_TB,
+			Selector => Selector_TB,
+			Salida => Salida_TB
 		);
 		
 	Estimulos: process --Estimulos
 		begin
-			Selector <= "000";
+			Selector_TB <= "000";
 			wait for 10 ns; --retardos
-			Selector <= "001";
+			Selector_TB <= "001";
 			wait for 10 ns;
-			Selector <= "010";
+			Selector_TB <= "010";
 			wait for 10 ns;
-			Selector <= "011";
+			Selector_TB <= "011";
 			wait for 10 ns;
-			Selector <= "100";
+			Selector_TB <= "100";
 			wait for 10 ns;
-			Selector <= "101";
+			Selector_TB <= "101";
 			wait for 10 ns;
 			wait;
 			
