@@ -32,7 +32,7 @@ ghdl -r Midiseño_TB --vcd=Testbench.vcd
 # Visualizar testbench en forma de onda
 gtkwave Testbench.vcd 
 
-# Para utilizar algun estandar de vhdl ej. 2008
+# Para utilizar algún estándar de vhdl ej. 2008
 ghdl -a --std=08 Midiseño.vhd
 ghdl -a --std=08 Midiseño_TB.vhd
 ghdl -e --std=08 .....
