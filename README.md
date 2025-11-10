@@ -32,7 +32,11 @@ ghdl -r Midiseño_TB --vcd=Testbench.vcd
 # Visualizar testbench en forma de onda
 gtkwave Testbench.vcd 
 
-# Para utilizar algun estandar
+# Para utilizar algun estandar de vhdl ej. 2008
+ghdl -a --std=08 Midiseño.vhd
+ghdl -a --std=08 Midiseño_TB.vhd
+ghdl -e --std=08 .....
+ghdl -r --std=08 ....
 ```
 ### ⚙️  Para automatización de compilado y simulación 💻
 A medida que los diseños se vuelven más complejos y requieren instanciación de múltiples entidades, es necesario que todas estas sean compiladas previo a la compilación del diseño principal.<br>
