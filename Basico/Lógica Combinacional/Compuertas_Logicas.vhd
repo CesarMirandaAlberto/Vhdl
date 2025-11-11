@@ -5,7 +5,7 @@
 --  a los fundamentos de VHDL.
 --  El codigo consta de dos entradas y seis salidas una para cada compuerta
 --  se implementa asignamiento continuo para la asignacion de las compuertas
---  lógicas.
+--  lógicas a las salidas.
 -- ===========================================================================
 
 -- Inclusion de librerias
