@@ -3,6 +3,7 @@
 --	Este codigo VHDL implementa el testbench para verificar y analizar el 
 --  funcionamiento del demultiplexor 2 a 1.
 --  Notas: DUT -> Nombre de la instanciación
+--  La instanciación de la entidad se realiza por componente.
 -- ===========================================================================
 --Inclusion de librerias
 library IEEE;
@@ -14,6 +15,7 @@ end entity;
 
 --Declaración de la arquitectura
 architecture Testbench of Demultiplexor2a1_TB is
+
 --Definición del componente (entidad) a verificar de forma local 
 	component Demultiplexor2a1
 		port(
