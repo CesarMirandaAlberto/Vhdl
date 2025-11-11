@@ -2,6 +2,9 @@
 -- 				***** TESTBENCH DE COMPUERTAS LOGICAS *****
 -- 	Este código implementa el testbench de la entidad Compuertas Logicas a fin
 --  de comprobar y analizar el correcto funcionamiento de la entidad.
+--  NOTA:
+--  DUT : Nombre de la Instanciación
+--  Para la Instanciacion de la entidad se hace mediante componente.
 -- ===========================================================================
    
 --Inclusion de librerias
@@ -40,7 +43,7 @@ architecture Testbench of Compuertas_Logicas_TB is
 	signal Sxor_TB:  std_logic;
 	
 	begin
-	--Instanciacion a la entidad principal (conectar los puertos de la entidad principal con las señales del Testbench)
+	--Instanciacion a la entidad principal 
 	DUT: Compuertas_Logicas
 		port map(
 			X => X_TB,
