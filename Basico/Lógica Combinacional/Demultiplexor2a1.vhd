@@ -22,7 +22,7 @@ entity Demultiplexor2a1 is
 	);
 end entity;
 
---Declaración de arquitectura de la entidad
+--Declaración de la arquitectura de la entidad
 architecture Demultiplexor of Demultiplexor2a1 is
 	--Declaracion de constantes 
 	constant SALIDAUNO : std_logic_vector := "01";
