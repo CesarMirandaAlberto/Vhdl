@@ -4,6 +4,7 @@
 --  funcionamiento del multiplexor 1 a 4.
 --  DUT: Nombre de la instanciación a la entidad del demultiplexor
 --  la instanciación de la entidad es realizada por componente.
+--
 -- ===========================================================================
 --Inclusión de librerias
 library IEEE;
@@ -36,7 +37,7 @@ architecture Testbench of Demultiplexor4a1_TB is
 			signal Salida4_TB :  std_logic_vector(3 downto 0);
 	
 	begin
-		DUT: Demultiplexor4a1 --Instanciación de la entidad del demultiplexor
+		DUT: Demultiplexor4a1 --Instanciación 
 			port map ( --Mapeo de señales
 				X => X_TB,
 				Selector => selector_TB,
@@ -48,8 +49,8 @@ architecture Testbench of Demultiplexor4a1_TB is
 			
 	Estimulos: process --Estimulos de las señales
 		begin
-				Selector_TB <= "0000"; --Asignación de valores
-				wait for 10 ns; -- Retardos
+				Selector_TB <= "0000"; 
+				wait for 10 ns; 
 				Selector_TB <= "0001";
 				wait for 10 ns;
 				Selector_TB <= "0010";
