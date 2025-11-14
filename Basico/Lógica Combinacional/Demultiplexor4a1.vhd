@@ -9,9 +9,9 @@
 library IEEE;
 use ieee.std_logic_1164.all;
 
---Declaración de la entidad
+--Declaración de la entidad y lista de puertos
 entity Demultiplexor4a1 is
-	port( --Declaración de lista de puertos
+	port(
 		--Entradas
 		X : in std_logic_vector(3 downto 0);
 		Selector : in std_logic_vector(3 downto 0);
