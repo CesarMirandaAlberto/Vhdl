@@ -10,9 +10,8 @@
 library IEEE;
 use ieee.std_logic_1164.all;
 
--- Declaración de la entidad
+-- Declaración de la entidad y lista de puertos
 entity Multiplexor4a1 is
--- Declaración de lista de puertos
 	port(
 	--Entradas 
 		A : in std_logic_vector(2 downto 0);
