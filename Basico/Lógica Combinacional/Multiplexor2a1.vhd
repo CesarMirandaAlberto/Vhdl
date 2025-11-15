@@ -11,9 +11,9 @@
 library IEEE;
 use ieee.std_logic_1164.all;
 
---Declaración de entidad
+--Declaración de entidad y lista de puertos
 entity Multiplexor2a1 is 
-	port( --Lista de puertos
+	port( 
 	--Entradas
 		X : in std_logic;
 		Y : in std_logic;
