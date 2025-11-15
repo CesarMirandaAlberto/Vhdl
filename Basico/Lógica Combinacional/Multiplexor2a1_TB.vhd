@@ -47,8 +47,8 @@ architecture Testbench of Multiplexor2a1_TB is
 			X_TB <= '1';
 			Y_TB <= '0';
 			
-			Selector_TB <="00"; --Asignación de valores
-			wait for 10 ns; --Retardo entre estimulos
+			Selector_TB <="00"; 
+			wait for 10 ns; 
 			Selector_TB <= "01"; 
 			wait for 10 ns;
 			Selector_TB <="10";
