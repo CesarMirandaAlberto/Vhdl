@@ -35,7 +35,7 @@ architecture Testbench of Multiplexor4a1_TB is
 		signal	Salida_TB :  std_logic_vector(2 downto 0);
 	
 	begin
-	--instanciación de Multiplexor4a1
+	--instanciación 
 	DUT: Multiplexor4a1
 		port map( --Mapeo de señales
 			A => A_TB,
