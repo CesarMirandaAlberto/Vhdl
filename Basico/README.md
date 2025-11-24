@@ -16,3 +16,6 @@ La plantilla esta orientada para diseños que tienen múltiples entidades en la 
 ## ⚙️Instrucciones de código de plantilla ⚙️
 La plantilla se puede adaptar a múltiples diseños con diferente nivel estructural solo es cuestion de modificar las
 entidades con su extensión.vhd que requiere el módulo top.
++ 1.- La archivo  `.bat` se puede modificar con notepad para ajustar los diseños acorde al módulo top
++ 2.- Para ejecutar la plantilla se puede hacer dando doble click en ella.
+
