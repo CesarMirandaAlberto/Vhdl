@@ -10,9 +10,9 @@ La plantilla esta orientada para diseños que tienen múltiples entidades en la 
    + -📁 Vhdl
    + --📁-📁 Basico
    +          Entidades.vhd
-+ Dado que todas las entidades estan en la misma carpeta como en este repositorio no es necesario modificar la ruta de los archivos, por lo que la compilación de las entidades es normal. 
++ Dado que todas las entidades estan en la misma carpeta no es necesario modificar la ruta de compilado de los archivos
 
 
 ## ⚙️Instrucciones de código de plantilla ⚙️
 La plantilla se puede adaptar a múltiples diseños con diferente nivel estructural solo es cuestion de modificar las
-entidades con su extensión.vhd que requiere el diseñotop.
+entidades con su extensión.vhd que requiere el módulo top.
