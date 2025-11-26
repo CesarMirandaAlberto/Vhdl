@@ -4,6 +4,10 @@
 --	El presente código implementa el diseño de un restador completo de 1 bit a 
 --	nivel estructural, se instancia al Medio Restador en dos ocaciones para 
 --	formar el restador completo.
+--  ESTRUCTURA DEL DISEÑO:
+--		* Medio_Restador
+--		* Restador_Completo
+--  NOTA : Se deben compilar las entidades acorde a la estructura del diseño. 
 --	La entidad consta de 3 entradas y 2 salidas de un bit.
 --	se implementan signal para conectar los medios restadores
 --  MR1 : Medio Restador 1 etc.
