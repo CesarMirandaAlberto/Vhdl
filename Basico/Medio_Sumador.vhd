@@ -25,7 +25,7 @@ end entity;
 --ArquitecturA
 architecture MedioSumador of Medio_Sumador is
 	begin
-	--Asignación de operaciones mediante compuertas lógicas 
+	--Asignamiento continuo de operaciones mediante compuertas lógicas 
 	 Salida <= X xor Y;
 	 CarriSalida <= X and Y;
 	 
