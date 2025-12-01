@@ -56,13 +56,13 @@ architecture Decodificador of DecodificadorBinario_Hexadecimal is
 	constant NUMEROSEIS: std_logic_vector(6 downto 0) := "0000010";
 	constant NUMEROSIETE: std_logic_vector(6 downto 0) := "1111000";
 	constant NUMEROOCHO: std_logic_vector(6 downto 0) := "0000000";
-	constant NUMERONUEVE: std_logic_vector(6 downto 0) := "0010000";
+	constant NUMERONUEVE: std_logic_vector(6 downto 0) := "0011000";
 	constant LETRAA: std_logic_vector(6 downto 0) := "0001000";
-	constant LETRAB: std_logic_vector(6 downto 0) := "1100000";
-	constant LETRAC: std_logic_vector(6 downto 0) := "0110001";
-	constant LETRAD: std_logic_vector(6 downto 0) := "1000010";
-	constant LETRAE: std_logic_vector(6 downto 0) := "0110000";
-	constant LETRAF: std_logic_vector(6 downto 0) := "0111000";
+	constant LETRAB: std_logic_vector(6 downto 0) := "0000011";
+	constant LETRAC: std_logic_vector(6 downto 0) := "1000110";
+	constant LETRAD: std_logic_vector(6 downto 0) := "0100001";
+	constant LETRAE: std_logic_vector(6 downto 0) := "0000110";
+	constant LETRAF: std_logic_vector(6 downto 0) := "0001110";
 	constant DEFECTO: std_logic_vector(6 downto 0) := "1111111";
 	
 	begin
