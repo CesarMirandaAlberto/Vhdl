@@ -40,12 +40,11 @@ ghdl -r --std=08 ....
 ```
 
 ## ⚠️ Los códigos presentados en este repositorio estan desarrollados bajo el estandar vhdl 2008 ⚠️ 
-Los módulos fueron desarrollados bajo este estandar por lo que si no se especifica algunos de los comandos o librerias puede que no esten disponibles en otros estandares diferentes.
+Los módulos fueron desarrollados bajo este estandar por lo que si no se especifica algunos de los comandos o librerias puede que no esten disponibles en otros estandares diferentes por lo que puede generar errores en los compilados ❌ .
 
-### ⚙️  Para automatización de compilado y simulación 💻
+### ⚙️  Para automatización de compilado y simulación 💻📉 
 A medida que los diseños se vuelven más complejos y requieren instanciación de múltiples entidades, es necesario que todas estas sean compiladas previo a la compilación del diseño principal.<br>
 Para automatizar el proceso, en algunos de los proyectos se incluyen archivos `.bat` que permiten compilar, ejeutar la simulación de forma automatica.<br>
-En el repositorio [FPGA-Scripts-Automatización](https://github.com/CesarMirandaAlberto/FPGA-Scripts-Automatizacion.git) se explican a detalle los casos en que se aplica cada plantilla. <br>
+En el repositorio 🔗 [FPGA-Scripts-Automatización](https://github.com/CesarMirandaAlberto/FPGA-Scripts-Automatizacion.git) se explican a detalle los casos en que se aplica cada plantilla. <br>
 ### ⚠️ Leer readme de cada nivel ⚠️
-Dado que varios de los módulos instancian el mismo diseño, para evitar redundancia y subir códigos repetidos se especifican que plantilla es la adecuada para compilar y visualizar los módulos.
-
+Dado que varios de los módulos instancian el mismo diseño, para evitar redundancia y subir códigos repetidos se especifican que plantilla es la adecuada para compilar y visualizar los módulos, por ejemplo el sumador de 4 bits que instancia al sumador completo y a su vez al medio sumador todos estos diseños deben de estar en la misma carpeta que el módulo top por lo que por consecuente se duplicarian los códigos.
