@@ -38,12 +38,14 @@ ghdl -a --std=08 Midiseño_TB.vhd
 ghdl -e --std=08 .....
 ghdl -r --std=08 ....
 ```
+
+## ⚠️ Los códigos presentados en este repositorio estan desarrollados bajo el estandar vhdl 2008 ⚠️ 
+Los módulos fueron desarrollados bajo este estandar por lo que si no se especifica algunos de los comandos o librerias puede que no esten disponibles en otros estandares diferentes.
+
 ### ⚙️  Para automatización de compilado y simulación 💻
 A medida que los diseños se vuelven más complejos y requieren instanciación de múltiples entidades, es necesario que todas estas sean compiladas previo a la compilación del diseño principal.<br>
 Para automatizar el proceso, en algunos de los proyectos se incluyen archivos `.bat` que permiten compilar, ejeutar la simulación de forma automatica.<br>
-
+En el repositorio [FPGA-Scripts-Automatización](https://github.com/CesarMirandaAlberto/FPGA-Scripts-Automatizacion.git) se explican a detalle los casos en que se aplica cada plantilla. <br>
 ### ⚠️ Leer readme de cada nivel ⚠️
-Dado que varios de los diseños instancian el mismo diseño, para evitar redundancia y subir los mismos diseños se desarrollan dos plantillas genericas para los siguientes casos, dentro de estos readme se encuentra la explicación de las plantillas de los `.bat`.
+Dado que varios de los módulos instancian el mismo diseño, para evitar redundancia y subir códigos repetidos se especifican que plantilla es la adecuada para compilar y visualizar los módulos.
 
-+ 1.- Diseños donde tanto la entidad principal como las que se instanciarán estan en la misma carpeta.
-+ 2.- Diseños donde la entidad principal se encuentra en una carpeta diferente al de las entidades a instancias.
