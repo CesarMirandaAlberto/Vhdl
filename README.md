@@ -47,4 +47,5 @@ A medida que los diseños se vuelven más complejos y requieren instanciación d
 Para automatizar el proceso, en algunos de los proyectos se incluyen archivos `.bat` que permiten compilar, ejeutar la simulación de forma automatica.<br>
 En el repositorio 🔗 [FPGA-Scripts-Automatización](https://github.com/CesarMirandaAlberto/FPGA-Scripts-Automatizacion.git) se explican a detalle los casos en que se aplica cada plantilla. <br>
 ### ⚠️ Leer readme de cada nivel ⚠️
-Dado que varios de los módulos instancian el mismo diseño, para evitar redundancia y subir códigos repetidos se especifican que plantilla es la adecuada para compilar y visualizar los módulos, por ejemplo el sumador de 4 bits que instancia al sumador completo y a su vez al medio sumador todos estos diseños deben de estar en la misma carpeta que el módulo top por lo que por consecuente se duplicarian los códigos.
+En cada nivel se especifica en el readme el tipo de plantilla que se implementó en el desarrollo de los diseños.
+
