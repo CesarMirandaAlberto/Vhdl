@@ -7,6 +7,8 @@ El presente proyecto implementa el diseño de una máquina de estados de tipo mo
 📂 quartus : Contiene los scripts tcl para bajar el diseño mediante quartus. <br>
 
 # EJECUTABLES
-Se incluyen 2 ejecutables en la carpeta
+Se incluyen 2 ejecutables en la carpeta: <br>
  Compilar_Simular : Compila el diseño mediante ghdl, simula y visualiza mediante GTKWave.<br>
  Bajar_AFPGA :  Baja el diseño al FPGA.<br>
+
+ # ⚠️ ! ACERCA DE LOS MODULOS TOP ! ⚠️
