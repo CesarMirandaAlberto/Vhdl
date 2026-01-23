@@ -14,3 +14,11 @@ Se incluyen 2 ejecutables en la carpeta: <br>
  # ⚠️ ! ACERCA DE LOS MODULOS TOP ! ⚠️
  Modulo_Top.vhd : Es el módulo top a nivel rtl del proyecto. <br>
  Top.vhd : Es el módulo top a nivel de hardware el cual se encarga de enlazar pines físicos del FPGA con puertos del diseño.
+ 
+ # ! ACERCA DEL PROYECTO !
+ La máquina de estados requiere de múltiples funcionalidades para trabajar entre las cuales están : <br>
+ Divisor de frecuencia : <br>
+ Contador : <br>
+ FSM_Semaforo2V : <br>
+ Modulo_Top : <br>
+ FSM_Semaforo2V_TB : <br>
