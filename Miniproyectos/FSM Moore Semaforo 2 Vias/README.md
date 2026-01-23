@@ -12,3 +12,5 @@ Se incluyen 2 ejecutables en la carpeta: <br>
  Bajar_AFPGA :  Baja el diseño al FPGA.<br>
 
  # ⚠️ ! ACERCA DE LOS MODULOS TOP ! ⚠️
+ Modulo_Top.vhd : Es el módulo top a nivel rtl del proyecto. <br>
+ Top.vhd : Es el módulo top a nivel de hardware el cual se encarga de enlazar pines físicos del FPGA con puertos del diseño.
