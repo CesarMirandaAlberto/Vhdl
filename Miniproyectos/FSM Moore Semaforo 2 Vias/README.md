@@ -17,8 +17,8 @@ Se incluyen 2 ejecutables en la carpeta: <br>
  
  # ! ACERCA DEL PROYECTO !
  La máquina de estados requiere de múltiples funcionalidades para trabajar entre las cuales están : <br>
- Divisor de frecuencia : <br>
- Contador : <br>
- FSM_Semaforo2V : <br>
- Modulo_Top : <br>
- FSM_Semaforo2V_TB : <br>
+ Divisor de frecuencia : Para generar el parpadeo de los leds.<br>
+ Contador : Tener un control del tiempo que permanecerán encendidos los leds.<br>
+ FSM_Semaforo2V : Contiene estados, tranciciones de la FSM, (SOLO LOGICA DE LA FSM). <br>
+ Modulo_Top : Conecta todos los módulos utilizados en un solo diseño. <br>
+ FSM_Semaforo2V_TB : Genera el testbench para analizar el funcionamiento completo de la FSM.<br>
