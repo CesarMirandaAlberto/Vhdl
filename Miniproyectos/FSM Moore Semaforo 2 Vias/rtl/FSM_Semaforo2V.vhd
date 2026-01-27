@@ -1,12 +1,29 @@
--- ORDEN DE LOS FOCOS (LEDS) EN VECTORES
--- 0 VERDE
--- 1 AMARILLO
--- 2 ROJO
+-- ===============================================================================================
+--										**** FSM SEMAFORO 2 VIAS ****
 --
+--	El presente código implementa el desarrollo de una máquina de estados finitos aplicada a 
+--	un semaforo de 2 vias. El diseño consta de 3 entradas clk, rst, FlagTiempo y 3 SALIDAS
+--	1 salida con ancho de 4 bits y 2 salidas con ancho de 3 bits.
+--	FlagTiempo : 
+--		Determina si el tiempo del estado X se ha cumplido y puede avanzar al siguiente.
+--	FLIP FLOP:
+--		Se implementa un flip flop D sensible al flanco de subida de reloj para actualizar los
+--		estados o para resetear los mismos.
+--
+--	ACTUALIZAR ESTADOS: 
+--		Se implementa una lista sensitiva con el pulso de reloj y FlagTiempo el cual evalua el 
+--		estado actual y si FlagTiempo esta activa se cambia al siguiente estado.
+--
+--	SALIDAS :
+--		Asigna el "color" del semaforo (salidas) acorde al estado de la FSM mediante una lista 
+--		sensitiva.
+-- ===============================================================================================
+
+--Inclusión de librerias
 library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+--Entidad y Lista de puertos
 entity FSM_Semaforo2V is
 	port(
 		clk : in std_logic;
@@ -17,7 +34,7 @@ entity FSM_Semaforo2V is
 		SEMAFORO2 : out std_logic_vector(2 downto 0)
 	);
 end entity;
-
+--Arquitectura de la FSM
 architecture FSM of FSM_Semaforo2V is
 	
 	--Estados de la FSM
@@ -25,6 +42,7 @@ architecture FSM of FSM_Semaforo2V is
 	
 	signal EActual, ESiguiente : Estado;
 	
+	--Señales internas de control
 	signal parpadeo : std_logic := '0';
 	signal contadorP : unsigned(0 downto 0) := (others=>'0');
 	
@@ -89,10 +107,11 @@ architecture FSM of FSM_Semaforo2V is
 			end case;
 		end process;
 	
+	-- Asignación de estados a las salidas.
 		EstadoSal <= 
 		0 when EActual = VERDE1 else
 		1 when EActual = AMARILLO1 else
 		2 when EActual = VERDE2 else
 		3;
 		
-end FSM;
+end FSM; -- Fin de la arquitectura
