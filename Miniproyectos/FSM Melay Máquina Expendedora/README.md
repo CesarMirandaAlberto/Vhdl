@@ -16,3 +16,4 @@ Se incluyen 2 ejecutables en la carpeta: <br>
  Top.vhd : Es el módulo top a nivel de hardware el cual se encarga de enlazar pines físicos del FPGA con puertos del diseño.
 
 # 📃 ! ACERCA DEL PROYECTO ! 📝🎯
+Para que la máquina de estados funcione de manera óptima se requiere el desarrollo de diferentes módulos entre los cuales se encuentran lo siguientes: <br>
