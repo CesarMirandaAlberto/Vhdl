@@ -18,10 +18,12 @@ Se incluyen 2 ejecutables en la carpeta: <br>
 # 📃 ! ACERCA DEL PROYECTO ! 📝🎯
 Para que la máquina de estados funcione de manera óptima se requiere el desarrollo de diferentes módulos entre los cuales se encuentran lo siguientes: <br>
 
-FSM_Expendedora : Contiene toda la lógica y funcionamiento de la máquina de estados únicamente contiene únicemente transiciones, actualizaciones, y salidas de los estados. <br>
-Divisor_Frecuencia : Genera un pulso de reloj de 1 hz partiendo de los 50 mhz que contiene el FPGA.
-PresionarBoton : Implementa Antirrebote, reloj de baja frecuencia  y detector de flancos para utilizar push buttons.
-Double Dabble : Algoritmo que separa un digito en binario en 2 diferentes para asi poder trabajar con dos dígitos. ej. 47 digitos 4 Y 7.
+* FSM_Expendedora : Contiene toda la lógica y funcionamiento de la máquina de estados únicamente contiene únicemente transiciones, actualizaciones, y salidas de los estados. <br>
+* Divisor_Frecuencia : Genera un pulso de reloj de 1 hz partiendo de los 50 mhz que contiene el FPGA.
+* PresionarBoton : Implementa Antirrebote, reloj de baja frecuencia  y detector de flancos para utilizar push buttons.
+* Double Dabble : Algoritmo que separa un digito en binario en 2 diferentes para asi poder trabajar con dos dígitos. ej. 47 digitos 4 Y 7.
+* DecoderBCD_7Seg : Partiendo de los valores generados por el Double Dabble y posteriormente son utilizados por el decoder para exhibirlos en display 7 segmentos.
+* FSM_Expendedora_TB : Implementa el testbench para analizar el funcionamiento general de la máquina de estados.
 
-
-
+# ⚠️ 💻! ACERCA DEL TESTBENCH !📈 ⚠️
+Dado que se implementan módulos como presionar boton los valores de los exhibidores en display 7 segmentos no se puede mostrar por completo dado que el tiempo de simulación es muy corto, sin embargo si se quiere visualizar se debe modificar el tiempo de los retardos o su escala de tiempo, sin embargo el tiempo que tardará en generarse la simulación será mayor.
