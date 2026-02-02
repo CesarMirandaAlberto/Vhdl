@@ -17,3 +17,11 @@ Se incluyen 2 ejecutables en la carpeta: <br>
 
 # 📃 ! ACERCA DEL PROYECTO ! 📝🎯
 Para que la máquina de estados funcione de manera óptima se requiere el desarrollo de diferentes módulos entre los cuales se encuentran lo siguientes: <br>
+
+FSM_Expendedora : Contiene toda la lógica y funcionamiento de la máquina de estados únicamente contiene únicemente transiciones, actualizaciones, y salidas de los estados. <br>
+Divisor_Frecuencia : Genera un pulso de reloj de 1 hz partiendo de los 50 mhz que contiene el FPGA.
+PresionarBoton : Implementa Antirrebote, reloj de baja frecuencia  y detector de flancos para utilizar push buttons.
+Double Dabble : Algoritmo que separa un digito en binario en 2 diferentes para asi poder trabajar con dos dígitos. ej. 47 digitos 4 Y 7.
+
+
+
