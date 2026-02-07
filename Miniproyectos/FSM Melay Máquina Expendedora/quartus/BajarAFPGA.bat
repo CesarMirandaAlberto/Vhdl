@@ -1,3 +1,4 @@
+:: PLANTILLA GENERICA CON FINES EDUCATIVOS Y DE PRÁCTICA
 @echo off
 echo ====== COMPILANDO =====
 quartus_sh -t build.tcl
