@@ -42,22 +42,20 @@ architecture FSM of FSM_Semaforo2V is
 	
 	signal EActual, ESiguiente : Estado;
 	
-	--Señales internas de control
-	signal parpadeo : std_logic := '0';
-	signal contadorP : unsigned(0 downto 0) := (others=>'0');
-	
 	begin
 		-- FLIP FLOP PARA ACTUALIZAR ESTADOS
 		process(clk, rst) begin
 			if(rst = '1') then
 				EActual <= VERDE1;
 			elsif rising_edge(clk) then
-				EActual <= ESiguiente;
+				if FlagTiempo = '1' then
+					EActual <= ESiguiente;
+				end if;
 			end if;
 		end process;
 		
 		-- ACTUALIZAR ESTADOS
-		process(clk, FlagTiempo) begin
+		process(EActual) begin
 			ESiguiente <= EActual;
 			
 			case EActual is
@@ -82,7 +80,7 @@ architecture FSM of FSM_Semaforo2V is
 			
 		end process;
 		
-		process(EActual, parpadeo) begin
+		process(EActual) begin
 			
 			SEMAFORO1 <= "000";
 			SEMAFORO2 <= "000";
