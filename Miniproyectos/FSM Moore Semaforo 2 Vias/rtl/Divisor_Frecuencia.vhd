@@ -3,36 +3,35 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity Divisor_Frecuencia is
+	generic(
+		VMAXIMO : integer := 50_000_000 -- 5 PARA SIMULAR EN TESTBENCH
+	);
 	port(
-		clk_Entrada : in std_logic;
+		clk : in std_logic;
 		rst : in std_logic;
-		clk_Salida : out std_logic
+		pulso : out std_logic
 	);
 end entity;
 
 architecture Divisor of  Divisor_Frecuencia is
 
-	constant VMaximo : integer := 25_000_000;
-	--constant VMaximo : integer := 5; -- VALOR PARA LA SIMULACION EN EL TESTBENCH
-	signal Contador : unsigned(24 downto 0) := (others => '0');
-	signal AuxSalida : std_logic := '0';
+	signal Contador : integer range 0 to VMAXIMO-1 := 0;	
 	
-begin
-	process(clk_Entrada, rst)
 	begin
-		if(rst = '1') then
-			Contador <= (others => '0');
-			AuxSalida <= '0';
-		elsif rising_edge(clk_Entrada) then
-			if(Contador = VMaximo-1 ) then
-				Contador <= (others => '0');
-				AuxSalida <= not AuxSalida;
-			else
-				Contador <= Contador + 1;
+		process(clk, rst)
+		begin
+			if(rst = '1') then
+				Contador <= 0;
+				pulso <= '0';
+			elsif rising_edge(clk) then
+				if(Contador = VMAXIMO-1 ) then
+					Contador <= 0;
+					pulso <= '1';
+				else
+					Contador <= Contador + 1;
+					pulso <= '0';
+				end if;
 			end if;
-		end if;
-	end process;
+		end process;
 
-	clk_Salida <= not AuxSalida;
-	
 end Divisor;
