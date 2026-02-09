@@ -8,7 +8,6 @@
 --	de reloj.
 -- ===============================================================================================
 
---Inclusión 
 library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -17,6 +16,7 @@ entity Contador is
 	port(
 		clk : in std_logic;
 		rst : in std_logic;
+		Pulso_Divisor : in std_logic;
 		Estado : in integer range 0 to 3;
 		FlagTiempo : out std_logic
 	);
@@ -28,30 +28,37 @@ architecture simple of Contador is
 	signal Limite : integer := 10;
 	
 	begin
-		process (clk, rst) begin
+	
+		process(Estado)
+		begin
+			case Estado is
+				when 0 => Limite <= 10; -- VERDE1
+				when 1 => Limite <= 4;  -- AMARILLO1
+				when 2 => Limite <= 10; -- VERDE2
+				when 3 => Limite <= 4;  -- AMARILLO2
+				when others => Limite <= 10;
+			end case;
+		end process;
+
+		-- Contador de segundos
+		process(clk, rst)
+		begin
 			if rst = '1' then
 				Cuenta <= 0;
-				Limite <= 10;
 				FlagTiempo <= '0';
-				
+
 			elsif rising_edge(clk) then
-			
-				case Estado is
-					when 0 => Limite <= 10; --VERDE1
-					when 1 => Limite <= 4; --AMARILLO1
-					when 2 => Limite <= 10; --VERDE2
-					when 3 => Limite <= 4; --AMARILLO1
-					when others => Limite <= 10;
-				end case;
-				
-				-- Contador
-				if Cuenta = Limite - 1 then
-					FlagTiempo <= '1';
-					Cuenta <= 0; --Reinicio
+				if Pulso_Divisor = '1' then
+					if Cuenta = Limite - 1 then
+						Cuenta <= 0;
+						FlagTiempo <= '1';
+					else
+						Cuenta <= Cuenta + 1;
+						FlagTiempo <= '0';
+					end if;
 				else
 					FlagTiempo <= '0';
-					Cuenta <= Cuenta + 1;
-				end if;	
+				end if;
 			end if;
 		end process;
 	
