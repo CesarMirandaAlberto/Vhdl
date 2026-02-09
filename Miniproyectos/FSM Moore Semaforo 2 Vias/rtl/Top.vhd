@@ -32,7 +32,7 @@ architecture simple of Top is
 	-- Instanciación
 	IMTRTL : entity work.Modulo_Top
 		port map(
-			clk => CLK_50MHZ,
+			clk_top => CLK_50MHZ,
 			rst => BRST,
 			SEMAFORO1 => S1,
 			SEMAFORO2 => S2
