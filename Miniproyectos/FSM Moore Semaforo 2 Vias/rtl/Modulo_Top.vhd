@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity Modulo_Top is
 	port(
-		clk : in std_logic;
+		clk_top : in std_logic;
 		rst : in std_logic;
 		SEMAFORO1 : out std_logic_vector(2 downto 0);
 		SEMAFORO2 : out std_logic_vector(2 downto 0)
@@ -13,7 +13,7 @@ end entity;
 architecture ModuloTFSM of Modulo_Top is
 	
 	--SEÑALES INTERNAS 
-	signal clk_divisor : std_logic;
+	signal Pulso1Hz : std_logic;
 	signal FlagTime : std_logic;
 	signal EstadosFSM : integer range 0 to 3;
 	
@@ -22,16 +22,17 @@ architecture ModuloTFSM of Modulo_Top is
 		-- DIVISOR DE FRECUENCIA
 		IDF : entity work.Divisor_Frecuencia
 			port map(
-				clk_entrada => clk,
+				clk => clk_top,
 				rst => rst,
-				clk_salida => clk_divisor
+				pulso => Pulso1Hz
 			);
 		
 		--CONTADOR
 		ICNT : entity work.Contador
 			port map(
-				clk => clk_divisor,
+				clk => clk_top,
 				rst => rst,
+				Pulso_Divisor => Pulso1Hz,
 				Estado => EstadosFSM,
 				FlagTiempo => FlagTime
 			);
@@ -39,7 +40,7 @@ architecture ModuloTFSM of Modulo_Top is
 		-- MAQUINA DE ESTADOS
 		IFSM : entity work.FSM_Semaforo2V
 			port map(
-				clk => clk_divisor,
+				clk => clk_top,
 				rst => rst,
 				FlagTiempo => FlagTime,
 				EstadoSal => EstadosFSM,
