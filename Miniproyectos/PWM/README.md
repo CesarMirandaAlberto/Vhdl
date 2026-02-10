@@ -1,6 +1,6 @@
 # 📊 PWMW 📊
 
-El presente proyecto implementa el diseño de un módulo generador de PWM . <br>
+El proyecto implementa un módulo que genera una señal PWM que va aumentando o disminuyendo acorde a 2 botones "aumentar" y <br>"disminuir", al mismo tiempo que se muestra en display 7 segmentos el valor de la señal PWM y un led va ajustando su brillo <br> acorde al valor del duty. <br>
 
 # ORGANIZACIÓN DEL PROYECTO
 📂 rtl : Contiene los módulos .vhdl del proyecto. <br>
@@ -16,5 +16,11 @@ Se incluyen 2 ejecutables en la carpeta: <br>
  Top.vhd : Es el módulo top a nivel de hardware el cual se encarga de enlazar pines físicos del FPGA con puertos del diseño.
  
  # 📃 ! ACERCA DEL PROYECTO ! 📝🎯
- El proyecto implementa un módulo que genera una señal PWM que va aumentando o disminuyendo acorde a 2 botones "aumentar" y "disminuir", al mismo tiempo que se muestra en display 7 segmentos el valor de la señal PWM y un led va ajustando su brillo acorde al valor del duty.
- 
+ Para el funcionamiento del proyecto este esta desarrollado en diferentes módulos con una función especifica entre los cuales se encuentran: <br>
+* Divisor_Frecuencia : 
+* DoubleDabble : 
+* DecoderBCD_7Seg :
+* Pwm :
+* Modulo_Top :
+* Pwm_TB :
+* Top :
