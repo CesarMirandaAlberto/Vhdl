@@ -17,10 +17,11 @@ Se incluyen 2 ejecutables en la carpeta: <br>
  
  # 📃 ! ACERCA DEL PROYECTO ! 📝🎯
  Para el funcionamiento del proyecto este esta desarrollado en diferentes módulos con una función especifica entre los cuales se encuentran: <br>
-* Divisor_Frecuencia : 
-* DoubleDabble : 
-* DecoderBCD_7Seg :
-* Pwm :
-* Modulo_Top :
-* Pwm_TB :
-* Top :
+* Divisor_Frecuencia : Genera un pulso de 1 hz para visualizar los cambios en los displays y led.
+* DoubleDabble : Genera 3 Valores en formato binario a partir de un número de 8 bits (los del duty). 
+* DecoderBCD_7Seg : Recibe y muestra en display 7 segmentos los valores del duty.
+* Pwm : Genera el pulso pwm.
+* Modulo_Top :  Conecta todos los módulos en uno solo (top rtl).
+* Pwm_TB : Desarrolla el testbench del módulo top.
+* Top : Conecta los puertos del módulo top con los pines físicos del FPGA.
+
