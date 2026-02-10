@@ -25,3 +25,5 @@ Se incluyen 2 ejecutables en la carpeta: <br>
 * Pwm_TB : Desarrolla el testbench del módulo top.
 * Top : Conecta los puertos del módulo top con los pines físicos del FPGA.
 
+# ⚠️ ! ACERCA DEL TESTBENCH ! ⚠️
+El testbench se elaboro sin el módulo presionar boton, dado que al incluirlo el tiempo de simulación es demasiado elevado por lo que no es viable el agregarlo, para esto solo es cuestion de omitir estas instanciaciones en el módulo top rtl.
