@@ -1,0 +1,26 @@
+@echo off
+
+echo =============COMPILACION===================
+echo Compilando mi diseno......
+
+ghdl -a --std=08 DoubleDabble.vhd
+ghdl -a --std=08 DecoderBCD_7Seg.vhd
+ghdl -a --std=08 Pwm.vhd
+ghdl -a --std=08 Modulo_Top.vhd
+ghdl -a --std=08 Pwm_TB.vhd
+
+::ghdl -a --std=08 FSM_Expendedora_TB.vhd
+
+echo ==============TESTBENCH=====================
+echo Desarrollando testbench......
+ghdl -e --std=08 Pwm_TB
+
+echo =================VCD========================
+echo Generando archivos VCD.......
+ghdl -r  --std=08 Pwm_TB --vcd=Simulacion.vcd
+
+echo =============PROCESO TERMINADO===============
+echo Abriendo visualizador  de ondas......
+
+gtkwave Simulacion.vcd
+pause
