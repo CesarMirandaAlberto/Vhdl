@@ -28,5 +28,5 @@ Se incluyen 2 ejecutables en la carpeta: <br>
 # ⚠️ ! ACERCA DEL TESTBENCH ! ⚠️
 El testbench se elaboro sin el módulo presionar boton, dado que al incluirlo el tiempo de simulación es demasiado elevado por lo que no es viable el agregarlo, para esto solo es cuestion de omitir estas instanciaciones en el módulo top rtl.
 
-🔗 [VIDEO DE CÓDIGO BAJADO AL FPGA](https://youtu.be/UeF9WFjuXUA?si=Ed0pT9cN8DG6L9BD)
+🔗 [VIDEO DE CÓDIGO BAJADO AL FPGA](hhttps://youtu.be/UkJkhet9pT8?si=tsWrwVPkHuU8A1gO)
 
