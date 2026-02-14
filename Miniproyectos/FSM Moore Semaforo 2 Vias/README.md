@@ -27,4 +27,4 @@ Se incluyen 2 ejecutables en la carpeta: <br>
 
  La función del proyecto es desarrollar 2 semaforos los cuales estan sincronizados entre si para determinar cuál tiene el paso y en que momento.
  
- 🔗 [VIDEO DE CÓDIGO BAJADO AL FPGA](https://youtu.be/HTPcwc29c_w?si=ytbkzh9cOuyRUvYJ)
+ 🔗 [VIDEO DE CÓDIGO BAJADO AL FPGA](https://youtu.be/9DiuQ-BTPoY?si=Ke38MJvta7FpY8kZ)
