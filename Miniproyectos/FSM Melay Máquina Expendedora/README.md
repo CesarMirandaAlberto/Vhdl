@@ -28,4 +28,4 @@ Para que la máquina de estados funcione de manera óptima se requiere el desarr
 # ⚠️ 💻! ACERCA DEL TESTBENCH !📈 ⚠️
 Dado que se implementan módulos como presionar boton los valores de los exhibidores en display 7 segmentos no se puede mostrar por completo dado que el tiempo de simulación es muy corto, sin embargo si se quiere visualizar se debe modificar el tiempo de los retardos o su escala de tiempo, sin embargo el tiempo que tardará en generarse la simulación será mayor.
 
-🔗 [VIDEO DE CÓDIGO BAJADO AL FPGA](https://youtu.be/SW4SFRfQFLc?si=Zk4DZK0HvGOnxR2L)
+🔗 [VIDEO DE CÓDIGO BAJADO AL FPGA](https://youtu.be/PaWDgkV6XBQ?si=1JDhieSJg_DtLMsU)
