@@ -1,9 +1,38 @@
+-- ===============================================================================================
+--						**** MÓDULO TOP CALCULADORA 4 BITS ****
+--
+--	El presente código implementa el desarrollo del módulo top (rtl) donde se instancian los
+--	módulos de las múltiples operaciones que tiene la calculadora.
+--
+--	!!ACERCA DEL CÓDIGO !!
+--
+--	BUFFERS SUMA Y RESTA
+--	Se implementan buffer para almacenar el resultado de las operaciones de 4 bits.
+--	SALIDAS DE 8 BITS
+--	Dado que el resultado de la multiplicación es de 8 bits todas las salidas de las operaciones deben 
+--	ser de la misma longitud.
+--
+--	BUFFERS ALGORITMO DOUBLE DABBLE
+--	Se implementan buffer para almacenar las 3 salidas de 4 bits despues de aplicar el algoritmo a la
+--	salida de 8 bits.
+--
+--	CONCATENADOR
+--	Se concatenan 4 bits a las salidas de la suma y resta.
+--
+--	MULTIPLEXOR
+--	Para determinar que operación se realizará.
+--
+-- ===============================================================================================
+
+--Inclusión de librerias
 library IEEE;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+--Entidad y lista de puertos
 entity Calculadora4Bits is
 	port(
+		--ENTRADAS
 		X_Top : in std_logic_vector(3 downto 0);
 		Y_Top: in std_logic_vector(3 downto 0);
 		Selector : in std_logic_vector(1 downto 0);
@@ -16,30 +45,27 @@ entity Calculadora4Bits is
 	);
 end entity;
 
+-- Arquitectura del módulo top
 architecture simple of Calculadora4Bits is
 
+	-- BUFFERS PARA SUMA Y RESTA
 	signal SUMA : std_logic_vector(3 downto 0);
 	signal RESTA : std_logic_vector(3 downto 0);
 	
-	
+	--SALIDA DE 8 BITS 
 	signal RESULTADOSUMA : std_logic_vector(7 downto 0);
 	signal RESULTADORESTA : std_logic_vector(7 downto 0);
 	signal RESULTADOMULTIPLICACION : std_logic_vector(7 downto 0);
 	
+	--BUFFERS PARA ALGORITMO DOUBLE DABBLE
 	signal BCDUnidades: std_logic_vector(3 downto 0);
 	signal BCDDecenas: std_logic_vector(3 downto 0);
 	signal BCDCentenas : std_logic_vector(3 downto 0);
 	
-	signal bufferCentenasX : std_logic_vector(3 downto 0);
-	signal BufferUnidadesX : std_logic_vector(3 downto 0);
-	signal BufferDecenasX : std_logic_vector(3 downto 0);
-	
-	signal bufferCentenasY : std_logic_vector(3 downto 0);
-	signal BufferUnidadesY : std_logic_vector(3 downto 0);
-	signal BufferDecenasY : std_logic_vector(3 downto 0);
-	
+	--CARRIES
 	signal carrieAux : std_logic;
 	signal carrieAux2 : std_logic;
+	
 	
 	signal ResultadoFinal : std_logic_vector(7 downto 0);
 	
@@ -72,8 +98,10 @@ architecture simple of Calculadora4Bits is
 				Salida => RESULTADOMULTIPLICACION
 			);
 		
+		--CONCATENACIÓN
 		RESULTADOSUMA <= "0000" & SUMA;
 		RESULTADORESTA <= "0000" & RESTA;
+		
 		-- MULTIPLEXOR
 		with Selector select
 			ResultadoFinal <=  RESULTADOSUMA when "00",
@@ -108,22 +136,22 @@ architecture simple of Calculadora4Bits is
 			);
 			
 		-- RESULTADO	
-		IDDRU : entity work.DecoderBCD_7Seg
+		IDDRU : entity work.DecoderBCD_7Seg --UNIDADES
 			port map(
 				Binario => BCDUnidades,
 				Decimal => DisplayUnidades
 			);
 			
-		IDDRD : entity work.DecoderBCD_7Seg
+		IDDRD : entity work.DecoderBCD_7Seg --DECENAS
 			port map(
 				Binario => BCDDecenas,
 				Decimal => DisplayDecenas
 			);
 			
-		IDDRC : entity work.DecoderBCD_7Seg
+		IDDRC : entity work.DecoderBCD_7Seg --CENTENAS
 			port map(
 				Binario => BCDCentenas,
 				Decimal => DisplayCentenas
 			);
 		
-end simple;
+end simple; -- Fin del módulo
